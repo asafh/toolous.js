@@ -30,9 +30,18 @@
 		return typeof o !== "undefined";
 	};
 	/**
+	 * returns true iff the value is a function
+	 * @param {any} func the value to check if a function
+	 */
+	toolous.isFunction = function(o) {
+		return typeof o === "function";
+	};
+	
+	isFunction
+	/**
 	 * Merges properties from all Sets all properties in override to target, the rightmost object is the most important
 	 * @param {Object} target the object that will be merged into
-	 * @param {Object...} sources each source object's properties will be copied to target, the right most source is the most important. undefined values are ignored.
+	 * @param {Object...} sources each source object's properties will be copied to target, the right most source is the most significant. undefined values are ignored.
 	 * @return {Object} always returns target
 	 */
 	toolous.merge = function(target, source) {
