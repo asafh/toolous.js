@@ -5,6 +5,22 @@
 	 * @class toolous
 	 */
 	var toolous = exports;
+	
+	/**
+	 * Returns true iff the given object is an array
+	 * @param {any} obj the object to test
+	 * @method isArray
+	 */
+	toolous.isArray = Array.isArray || function(obj) {
+		return toString.call(obj) == '[object Array]';
+	};
+	
+	/**
+	 * No operation - does nothing.
+	 * @method noop
+	 */
+	toolous.noop = function() {};
+	
 	/**
 	 * Creates an array object of the captured arguments value from the given index (defaults to 0).
 	 * @param {arguments} args the array like arguments object, should always be <i>arguments</i>
